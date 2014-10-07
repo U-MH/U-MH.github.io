@@ -1,6 +1,11 @@
 # Site navigation links
 
-- title:
-  url:
-  excerpt:
-  image:
+- title: About
+  url: /about/
+  excerpt: "about UMH"
+  image: .jpg
+
+- title: Progression
+  url: /progression/
+  excerpt: "each work's developpment"
+  image: .jpg
