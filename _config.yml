@@ -5,7 +5,7 @@ description: "collaboration"
 logo: # 120x120 px default image used for Twitter summary card
 teaser: # 400x250 px default teaser image used in image archive grid
 locale:
-url: http://univmontanahosei.github.io/UnivMontanaHosei/
+url: http://univmontanahosei.github.io/UMH/
 
 # Jekyll configuration
 
@@ -21,8 +21,8 @@ gems:
 
 # Site owner
 owner:
-  name: tat
-  email:
+  name: Tatsuya Ishii
+  email: production.i.t@me.com
   twitter:
   google:
     ad-client: 
