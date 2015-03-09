@@ -9,8 +9,9 @@ module.exports = function(grunt) {
       },
       all: [
         'Gruntfile.js',
-        'js/*.js',
-        '!js/main.js'
+        'assets/js/*.js',
+        'assets/js/plugins/*.js',
+        '!assets/js/scripts.min.js'
       ]
     },
     watch: {
@@ -33,9 +34,9 @@ module.exports = function(grunt) {
           mangle: false
         },
         files: {
-          'js/main.js': [
-            'js/plugins/*.js',
-            'js/_*.js'
+          'assets/js/scripts.min.js': [
+            'assets/js/plugins/*.js',
+            'assets/js/_*.js'
           ]
         }
       }
@@ -78,6 +79,11 @@ module.exports = function(grunt) {
         }]
       }
     },
+    clean: {
+      dist: [
+        'assets/js/scripts.min.js'
+      ]
+    }
   });
 
   // Load tasks
@@ -88,8 +94,16 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-svgmin');
   grunt.loadNpmTasks('grunt-imgcompress');
+  grunt.loadNpmTasks('grunt-contrib-clean');
 
   // Register tasks
-  grunt.registerTask('scripts', ['watch', 'uglify']);
-  grunt.registerTask('images', ['newer:imgcompress', 'newer:svgmin']);
+  grunt.registerTask('scripts', [
+    'watch', 
+    'uglify'
+  ]);
+  grunt.registerTask(
+    'images', [
+      'newer:imgcompress', 
+      'newer:svgmin'
+    ]);
 };
