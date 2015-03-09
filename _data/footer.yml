@@ -1,11 +1,23 @@
 # Footer navigation links
 
-- title: Home
-  url: /
- 
 - title: About
   url: /about/
 
-- title: Progression
-  url: /progression/
+- title: FAQs
+  url: /faqs/
 
+- title: Subscribe
+  url: /subscribe/
+
+- title: Sponsor
+  url: /support/
+
+- title: Terms
+  url: /terms/
+
+- title: Style Guide
+  url: /style-guide/
+
+- title: Sitemap
+  url: /sitemap/
+  icon: fa-sitemap
